@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>Slide 1</section>
+				<section>Slide 2</section>
+				<section>
+					<section id="fragments">
+						<h2>How long have you been using RxJS?</h2>
+						<p class="fragment"> >1 month</p>
+						<p class="fragment"> >6 month</p>
+						<p class="fragment"> >1 year</p>
+						<p class="fragment"> >1 years</p>
+						<p class="fragment"> >5 years (yes it's been around that long)</p>
+
+						<aside class="notes">
+							This slide has fragments.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<p>RxJS is more than 9 years old</p>
+				</section>
+				<section>
+					<h2>Questions I've Asked:</h2>
+					<ul>
+						<li>"WTH is this? another Lodash?"(for async)</li>
+						<li>"What operator do i use for that?"</li>
+						<li>"How do I do this 'the Rx way'?"</li>
+						<li>"Why did that observable die?"</li>
+						<li>"What is this Rx code I wrote 4 months ago really doing?"</li>
+					</ul>
+				</section>
+				<section>
+					<p>Let's answer a few of there...</p>
+				</section>
+				<section>
+					<p>"Thinking Reactively"</p>
+				</section>
+				<section>
+					<h3>You have to start viewing your events in terms of dependencies</h3>
+				</section>
+				<section>
+					<h3>Drag and drop for example</h3>
+					<p>For each <span class="fragment highlight-green">mousedown on your target</span>, you start listening to <span class="fragment highlight-red">mousemoves on the document</span> until a single <span class="fragment highlight-blue">mouseup on the document</span></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
